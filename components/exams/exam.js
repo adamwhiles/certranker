@@ -4,7 +4,8 @@ export default function Exam({ examCode, examName }) {
   return (
     <Link
       className="rounded-md grid grid-cols-12 bg-dark-blue shadow p-3 m-2 gap-2 items-center transition-transform delay-50 duration-200 ease-in-out hover:scale-105 transform"
-      href={`/exams/${examCode}`}
+      href={`/exams/${examCode}`
+    }
     >
       <div className="col-span-12 md:col-span-1">
         <svg

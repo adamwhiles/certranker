@@ -18,7 +18,7 @@ export default function ExamList() {
     <div className="">
       <ul>
         {certs ? (
-          certs.map((cert) => <Exam examCode={cert.id} examName={cert.name} />)
+          certs.map((cert) => <Exam examCode={cert.id} examName={cert.name} key={cert.id}/>)
         ) : (
           <h2>No Certs</h2>
         )}

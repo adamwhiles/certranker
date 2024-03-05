@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <header className={styles.header}>
       <Link className={styles.logo} href="/">
-        MSVote
+        CertRanker
       </Link>
 
       <nav className={styles.nav}>
