@@ -3,6 +3,7 @@ import { CosmosClient } from "@azure/cosmos";
 
 export async function connectDatabase() {
   const endpoint = process.env.COSMOS_ENDPOINT;
+  const key = process.env.COSMOS_KEY;
 
   // Set Database name and container name with unique timestamp
   const databaseName = process.env.DATABASE_NAME;
@@ -12,7 +13,7 @@ export async function connectDatabase() {
   // Authenticate to Azure Cosmos DB
   const cosmosClient = new CosmosClient({
     endpoint,
-    aadCredentials: credentials,
+    key
   });
 
   const database = await cosmosClient.database(databaseName);
