@@ -15,6 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
+      - name: create env file
+        run: |
+          touch .env
+          echo COSMOS_ENDPOINT=${{ vars.COSMOS_ENDPOINT }} >> .env
+          echo COSMOS_KEY=${{ vars.COSMOS_KEY }} >> .env
+          echo COSMOS_DATABASE=${{ vars.COSMOS_DATABASE }} >> .env
+          echo COSMOS_CONTAINER=${{ vars.COSMOS_CONTAINER }} >> .env
       - uses: actions/checkout@v4
         with:
           submodules: true
