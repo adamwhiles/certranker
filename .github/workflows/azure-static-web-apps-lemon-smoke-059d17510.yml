@@ -17,10 +17,10 @@ jobs:
     steps:
       - name: create env file
         env:
-          COSMOS_ENDPOINT: ${{ vars.COSMOS_ENDPOINT }}
-          COSMOS_KEY: ${{ vars.COSMOS_KEY }}
-          DATABASE_NAME: ${{ vars.DATABASE_NAME }}
-          CONTAINER_NAME: ${{ vars.CONTAINER_NAME }}
+          COSMOS_ENDPOINT: ${{ secrets.COSMOS_ENDPOINT }}
+          COSMOS_KEY: ${{ secrets.COSMOS_KEY }}
+          DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
+          CONTAINER_NAME: ${{ secrets.CONTAINER_NAME }}
         run: |
           touch .env
           echo COSMOS_ENDPOINT="$COSMOS_ENDPOINT" >> .env
