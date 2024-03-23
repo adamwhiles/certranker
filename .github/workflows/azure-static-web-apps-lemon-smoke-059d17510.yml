@@ -16,12 +16,18 @@ jobs:
     name: Build and Deploy Job
     steps:
       - name: create env file
+        env:
+          COSMOS_ENDPOINT: ${{ vars.COSMOS_ENDPOINT }}
+          COSMOS_KEY: ${{ vars.COSMOS_KEY }}
+          DATABASE_NAME: ${{ vars.DATABASE_NAME }}
+          CONTAINER_NAME: ${{ vars.CONTAINER_NAME }}
         run: |
           touch .env
-          echo COSMOS_ENDPOINT=${{ vars.COSMOS_ENDPOINT }} >> .env
-          echo COSMOS_KEY=${{ vars.COSMOS_KEY }} >> .env
-          echo COSMOS_DATABASE=${{ vars.COSMOS_DATABASE }} >> .env
-          echo COSMOS_CONTAINER=${{ vars.COSMOS_CONTAINER }} >> .env
+          echo COSMOS_ENDPOINT="$COSMOS_ENDPOINT" >> .env
+          echo COSMOS_KEY="$COSMOS_KEY" >> .env
+          echo DATABASE_NAME="$DATABASE_NAME" >> .env
+          echo CONTAINER_NAME="$CONTAINER_NAME" >> .env
+          cat .env
       - uses: actions/checkout@v4
         with:
           submodules: true
