@@ -1,9 +1,9 @@
 import Link from "next/link";
-import styles from "./exam.module.css";
+import "./exam.css"
 export default function Exam({ examCode, examName }) {
   return (
     <Link
-      className="rounded-md grid grid-cols-12 bg-dark-blue shadow p-3 m-2 gap-2 items-center transition-transform delay-50 duration-200 ease-in-out hover:scale-105 transform"
+      className="rounded-md grid bg-gradient-to-l from-transparent to-cyan-200/20 grid-cols-12 shadow p-3 m-2 gap-2 items-center transition-transform delay-50 duration-200 ease-in-out hover:scale-105 transform"
       href={`/exams/${examCode}`
     }
     >
@@ -17,7 +17,7 @@ export default function Exam({ examCode, examName }) {
         >
           <g
             transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-            fill="#080d0e"
+            fill="grey"
             stroke=""
           >
             <path
@@ -99,11 +99,11 @@ export default function Exam({ examCode, examName }) {
       </div>
 
       <div className="col-span-11 xl:-ml-5">
-        <p className="text-primary-text font-semibold">{examCode}</p>
+        <p className="text-primary-text font-semibold ring ring-offset-2 rounded-md bg-cyan-600 w-20 text-center">{examCode}</p>
       </div>
 
       <div className="md:col-start-2 col-span-11 xl:-ml-5">
-        <p className="text-sm text-dark-bg">{examName}</p>
+        <p className="text-primary-text text-sm text-dark-bg">{examName}</p>
       </div>
     </Link>
   );

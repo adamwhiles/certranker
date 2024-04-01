@@ -18,7 +18,7 @@
     display: flex;
     gap: 1.5rem;
     /* font-family: 'Montserrat', sans-serif; */
-    font-size: 1.25rem;
+    font-size: 1.0rem;
   }
   
   .nav a {
@@ -31,7 +31,7 @@
   
   .nav a:hover,
   .nav a:active {
-    background: linear-gradient(90deg, #5e43f3, #7a5af5);
+    background: linear-gradient(90deg, #e53d42, #eb7175);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -39,7 +39,7 @@
   }
   
   .active {
-    background: linear-gradient(90deg, #5e43f3, #7a5af5);
+    background: linear-gradient(90deg, #e53d42, #e53d42);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -51,10 +51,10 @@
     justify-content: center;
     gap: 2rem;
     text-decoration: none;
-    color: #045f71;
+    color: #e53d42;
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.02rem;
     text-transform: uppercase;
     font-size: 1.5rem;
   }
